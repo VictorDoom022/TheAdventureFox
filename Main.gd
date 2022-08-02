@@ -9,3 +9,7 @@ func _on_Easy_pressed():
 
 func _on_Medium_pressed():
 	get_tree().change_scene("res://Levels/Medium.tscn")
+
+
+func _on_Hard_pressed():
+	get_tree().change_scene("res://Levels/Hard.tscn")

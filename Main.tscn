@@ -44,5 +44,13 @@ margin_right = 193.0
 margin_bottom = 124.0
 text = "Medium"
 
+[node name="Hard" type="Button" parent="."]
+margin_left = 140.0
+margin_top = 136.0
+margin_right = 182.0
+margin_bottom = 156.0
+text = "Hard"
+
 [connection signal="pressed" from="Easy" to="." method="_on_Easy_pressed"]
 [connection signal="pressed" from="Medium" to="." method="_on_Medium_pressed"]
+[connection signal="pressed" from="Hard" to="." method="_on_Hard_pressed"]
