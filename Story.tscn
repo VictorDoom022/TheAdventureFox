@@ -12,7 +12,7 @@ size = 8
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 8
+size = 7
 font_data = ExtResource( 2 )
 
 [sub_resource type="StyleBoxFlat" id=3]
@@ -58,6 +58,7 @@ custom_fonts/font = SubResource( 2 )
 text = "JJYY"
 align = 1
 valign = 1
+autowrap = true
 
 [node name="NextButton" type="Button" parent="."]
 margin_top = 130.0
