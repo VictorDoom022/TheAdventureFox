@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://World/GrassBackground.png" type="Texture" id=2]
+[ext_resource path="res://assets/bg.jpg" type="Texture" id=2]
 [ext_resource path="res://UI/Win.gd" type="Script" id=3]
+[ext_resource path="res://themes/SelectedPrimaryButton.tres" type="StyleBox" id=4]
+[ext_resource path="res://themes/UnSelectedPrimaryButton.tres" type="StyleBox" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 1 )
@@ -14,7 +16,7 @@ script = ExtResource( 3 )
 margin_right = 320.0
 margin_bottom = 184.0
 texture = ExtResource( 2 )
-stretch_mode = 2
+expand = true
 
 [node name="Label" type="Label" parent="."]
 margin_right = 320.0
@@ -26,11 +28,30 @@ align = 1
 valign = 1
 autowrap = true
 
-[node name="Retry" type="Button" parent="."]
-margin_left = 113.0
-margin_top = 97.0
-margin_right = 196.0
-margin_bottom = 117.0
-text = "Main Menu"
+[node name="HomeButton" type="Button" parent="."]
+margin_left = 60.0
+margin_top = 86.0
+margin_right = 143.0
+margin_bottom = 106.0
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/normal = ExtResource( 5 )
+text = "Home"
 
-[connection signal="pressed" from="Retry" to="." method="_on_Retry_pressed"]
+[node name="NextLevelButton" type="Button" parent="."]
+margin_left = 175.0
+margin_top = 86.0
+margin_right = 258.0
+margin_bottom = 106.0
+text = "Next Level"
+
+[node name="RetryButton" type="Button" parent="."]
+margin_left = 107.0
+margin_top = 119.0
+margin_right = 190.0
+margin_bottom = 139.0
+text = "Try Again"
+
+[connection signal="pressed" from="HomeButton" to="." method="_on_Retry_pressed"]
+[connection signal="pressed" from="NextLevelButton" to="." method="_on_Retry_pressed"]
+[connection signal="pressed" from="RetryButton" to="." method="_on_Retry_pressed"]

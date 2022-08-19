@@ -1,15 +1,9 @@
 extends Node2D
 
 
+func _on_ExitButton_pressed():
+	get_tree().quit()
 
 
-func _on_Easy_pressed():
-	get_tree().change_scene("res://Levels/Easy.tscn")
-
-
-func _on_Medium_pressed():
-	get_tree().change_scene("res://Levels/Medium.tscn")
-
-
-func _on_Hard_pressed():
-	get_tree().change_scene("res://Levels/Hard.tscn")
+func _on_StartButton_pressed():
+	get_tree().change_scene("res://Story.tscn")
