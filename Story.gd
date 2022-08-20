@@ -12,7 +12,8 @@ var story = [
 
 func _ready():
 	$StoryLabel.text = story[count]
-
+	$StoryLabel/Tween.replace_by($NextButton)
+	
 
 func _on_SkipButton_pressed():
 	get_tree().change_scene("res://ChooceLevel.tscn")

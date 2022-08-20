@@ -1,8 +1,10 @@
 extends Node2D
 
+var stats = PlayerStats
 
 func _ready():
-	print('ready')
+	stats.current_level_scene = get_tree().current_scene.filename
+	
 
 func _on_EndPointArea_area_entered(area):
 	get_tree().change_scene("res://UI/Win.tscn")

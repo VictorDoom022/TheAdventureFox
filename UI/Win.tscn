@@ -28,30 +28,40 @@ align = 1
 valign = 1
 autowrap = true
 
-[node name="HomeButton" type="Button" parent="."]
-margin_left = 60.0
-margin_top = 86.0
-margin_right = 143.0
-margin_bottom = 106.0
+[node name="VBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 77.0
+margin_top = 91.0
+margin_right = 256.0
+margin_bottom = 113.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="HomeButton" type="Button" parent="VBoxContainer"]
+margin_right = 41.0
+margin_bottom = 22.0
 custom_styles/hover = ExtResource( 4 )
 custom_styles/pressed = ExtResource( 4 )
 custom_styles/normal = ExtResource( 5 )
 text = "Home"
 
-[node name="NextLevelButton" type="Button" parent="."]
-margin_left = 175.0
-margin_top = 86.0
-margin_right = 258.0
-margin_bottom = 106.0
-text = "Next Level"
-
-[node name="RetryButton" type="Button" parent="."]
-margin_left = 107.0
-margin_top = 119.0
-margin_right = 190.0
-margin_bottom = 139.0
+[node name="RetryButton" type="Button" parent="VBoxContainer"]
+margin_left = 45.0
+margin_right = 105.0
+margin_bottom = 22.0
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/normal = ExtResource( 5 )
 text = "Try Again"
 
-[connection signal="pressed" from="HomeButton" to="." method="_on_Retry_pressed"]
-[connection signal="pressed" from="NextLevelButton" to="." method="_on_Retry_pressed"]
-[connection signal="pressed" from="RetryButton" to="." method="_on_Retry_pressed"]
+[node name="NextLevelButton" type="Button" parent="VBoxContainer"]
+margin_left = 109.0
+margin_right = 179.0
+margin_bottom = 22.0
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/normal = ExtResource( 5 )
+text = "Next Level"
+
+[connection signal="pressed" from="VBoxContainer/HomeButton" to="." method="_on_HomeButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/RetryButton" to="." method="_on_RetryButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/NextLevelButton" to="." method="_on_NextLevelButton_pressed"]
