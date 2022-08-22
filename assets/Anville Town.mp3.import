@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Anville Town.mp3-b97ec43d71f95a03ee3ac219be86bb66.mp3str"
+
+[deps]
+
+source_file="res://assets/Anville Town.mp3"
+dest_files=[ "res://.import/Anville Town.mp3-b97ec43d71f95a03ee3ac219be86bb66.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
