@@ -4,10 +4,10 @@
 [ext_resource path="res://themes/SelectedPrimaryButton.tres" type="StyleBox" id=2]
 [ext_resource path="res://themes/UnSelectedPrimaryButton.tres" type="StyleBox" id=3]
 [ext_resource path="res://assets/back_icon.png" type="Texture" id=4]
-[ext_resource path="res://ChooceLevel.gd" type="Script" id=5]
+[ext_resource path="res://ChooseLevel.gd" type="Script" id=5]
 [ext_resource path="res://assets/Unwavering Heart.mp3" type="AudioStream" id=6]
 
-[node name="ChooceLevel" type="Node2D"]
+[node name="ChooseLevel" type="Node2D"]
 script = ExtResource( 5 )
 
 [node name="TextureRect" type="TextureRect" parent="."]

@@ -1,5 +1,11 @@
 extends Node2D
 
+
+var stats = PlayerStats
+
+func _ready():
+	stats.health = 4
+
 func _on_BackButton_pressed():
 	get_tree().change_scene("res://Main.tscn")
 

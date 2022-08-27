@@ -16,7 +16,7 @@ func _ready():
 	
 
 func _on_SkipButton_pressed():
-	get_tree().change_scene("res://ChooceLevel.tscn")
+	get_tree().change_scene("res://ChooseLevel.tscn")
 
 
 func _on_NextButton_pressed():
@@ -24,4 +24,4 @@ func _on_NextButton_pressed():
 		count += 1
 		$StoryLabel.text = story[count]
 	else:
-		get_tree().change_scene("res://ChooceLevel.tscn")
+		get_tree().change_scene("res://ChooseLevel.tscn")

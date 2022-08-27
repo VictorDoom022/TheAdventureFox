@@ -1,0 +1,62 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/skip_icon.png" type="Texture" id=1]
+[ext_resource path="res://themes/SelectedPrimaryButton.tres" type="StyleBox" id=2]
+[ext_resource path="res://themes/UnSelectedPrimaryButton.tres" type="StyleBox" id=3]
+[ext_resource path="res://Fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://EndStoryLabel.gd" type="Script" id=5]
+[ext_resource path="res://Ending.gd" type="Script" id=6]
+[ext_resource path="res://assets/Unwavering Heart.mp3" type="AudioStream" id=7]
+[ext_resource path="res://assets/home.png" type="Texture" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 8
+font_data = ExtResource( 4 )
+
+[node name="Ending" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="Backgound" type="TextureRect" parent="."]
+margin_right = 320.0
+margin_bottom = 180.0
+texture = ExtResource( 8 )
+expand = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 5.0
+margin_top = 29.0
+margin_right = 315.0
+margin_bottom = 129.0
+color = Color( 0.0941176, 0.0941176, 0.0941176, 0.486275 )
+
+[node name="EndStoryLabel" type="Label" parent="."]
+margin_left = 12.0
+margin_top = 38.0
+margin_right = 307.0
+margin_bottom = 122.0
+custom_fonts/font = SubResource( 1 )
+text = "The fox realized that he had already done his best, although he can’t kill all the bats in the forest. He learned that although he had lost his previous family, he has found his new family which is the ones who adopted him. In the end, the fox returned to his human home and promised never to leave them again."
+align = 1
+autowrap = true
+script = ExtResource( 5 )
+
+[node name="Tween" type="Tween" parent="EndStoryLabel"]
+
+[node name="SkipButton" type="Button" parent="."]
+margin_left = 266.0
+margin_top = 137.0
+margin_right = 321.0
+margin_bottom = 157.0
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/normal = ExtResource( 3 )
+text = "Skip"
+icon = ExtResource( 1 )
+expand_icon = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -10.0
+autoplay = true
+
+[connection signal="pressed" from="SkipButton" to="." method="_on_SkipButton_pressed"]
