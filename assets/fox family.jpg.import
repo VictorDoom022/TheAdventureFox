@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fox and family.jpg-85b89cd67d808e9ce88eb67bd324cc74.stex"
+path="res://.import/fox family.jpg-80a804e11114eae7ed6ef8684eb35c23.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fox and family.jpg"
-dest_files=[ "res://.import/fox and family.jpg-85b89cd67d808e9ce88eb67bd324cc74.stex" ]
+source_file="res://assets/fox family.jpg"
+dest_files=[ "res://.import/fox family.jpg-80a804e11114eae7ed6ef8684eb35c23.stex" ]
 
 [params]
 
